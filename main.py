@@ -141,18 +141,4 @@ if __name__ == "__main__":
 
     history: List[BaseMessage] = []
 
-    while True:
-        user_input = input("You: ").strip()
-
-        # Check for exit commands
-        if user_input.lower() in ['quit', 'exit', 'q', ""]:
-            print("Goodbye!")
-            break
-
-        print("Agent: ", end="", flush=True)
-        response = run_agent(user_input, history)
-        print(response.content)
-        print()
-
-        # Update conversation history
-        history += [HumanMessage(content=user_input), response]
+    
