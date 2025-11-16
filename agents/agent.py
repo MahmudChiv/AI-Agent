@@ -7,6 +7,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI # type: ignore
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage # type: ignore
 from langchain_core.tools import tool # type: ignore
 from langgraph.prebuilt import create_react_agent # type: ignore
+from models.a2a import (
+    A2AMessage, TaskResult, TaskStatus, Artifact,
+    MessagePart, MessageConfiguration
+)
 
 from dotenv import load_dotenv # type: ignore
 
